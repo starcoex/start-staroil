@@ -7,9 +7,8 @@ import Navbar from "../components/Navbar";
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div>
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
+      {/*<Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />*/}
       <Container className="relative">
-        Starcoex
         <Navbar />
       </Container>
     </div>

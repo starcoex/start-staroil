@@ -1,12 +1,18 @@
 import { graphql, useStaticQuery } from "gatsby";
 
 const useMenuQuery = () => {
-  const data = useStaticQuery(graphql`
+  return useStaticQuery(graphql`
     query HeaderQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       wpMenu(name: { eq: "mainMenu" }) {
         menuItems {
           nodes {
             label
+            url
             parentId
             id
             childItems {
@@ -21,7 +27,6 @@ const useMenuQuery = () => {
       }
     }
   `);
-  return data;
 };
 
 export default useMenuQuery;

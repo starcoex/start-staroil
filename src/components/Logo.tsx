@@ -1,10 +1,13 @@
 import clsx from "clsx";
 import React from "react";
 import logoStarcoex from "../images/starcoexLogo.svg";
+import useMenuQuery from "../hooks/useMenuQuery";
 
 export default function Logo({
   className,
 }: React.ComponentPropsWithoutRef<"div">) {
+  const data = useMenuQuery();
+  const { site } = data;
   return (
     <div
       className={clsx(
@@ -13,7 +16,7 @@ export default function Logo({
       )}
     >
       <img
-        alt="Starcoex Company"
+        alt={site.siteMetadata.title}
         src={logoStarcoex}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />

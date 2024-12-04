@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `start-staroil-wordpress`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.starcoex.co.kr`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "http://192.168.1.110:5010/graphql",
+        url: "http://cakeit.local/graphql",
       },
     },
     "gatsby-plugin-image",
