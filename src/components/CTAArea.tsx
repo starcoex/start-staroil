@@ -13,8 +13,8 @@ const CtaArea = () => {
             wpPage?.ACF_HomePage[`cta${index + 1}Image`].localFile
               .childImageSharp.gatsbyImageData
           }
-          link={`cta${index + 1}Link`}
-          text={`cta${index + 1}Text`}
+          link={wpPage?.ACF_HomePage?.[`cta${index + 1}Link`]}
+          text={wpPage?.ACF_HomePage?.[`cta${index + 1}Text`]}
         />
       ))}
     </div>

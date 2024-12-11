@@ -1,5 +1,5 @@
 import { GatsbyNode } from "gatsby";
-import path from "node:path";
+import path from "path";
 
 export const createPages: GatsbyNode["createPages"] = async ({
   actions,
@@ -8,7 +8,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { createPage } = actions;
   const BlogTemplate = path.resolve("./src/templates/Blog.tsx");
-  const result = await graphql(`
+  const result = await graphql<Queries.BlogPagesQuery>(`
     query BlogPages {
       wp {
         readingSettings {
@@ -34,10 +34,9 @@ export const createPages: GatsbyNode["createPages"] = async ({
     return;
   }
 
-  const { wp, allWpCategory } = result.data;
-  allWpCategory.edges.forEach((category) => {
-    const postsPerPage = wp.readingSettings.postsPerPage;
-    const numberOfPosts = category.node.count;
+  result.data?.allWpCategory.edges.forEach((category) => {
+    const postsPerPage = result.data?.wp?.readingSettings?.postsPerPage!;
+    const numberOfPosts = category.node.count!;
     const numPages = Math.ceil(numberOfPosts / postsPerPage);
 
     // Some categories may be empty and we don't want to create pages for them
@@ -46,7 +45,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
     if (numberOfPosts > 0 || category.node.name !== "uncategorized") {
       Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
-          path: i === 0 ? category.node.uri : `${category.node.uri}${i + 1}`,
+          path:
+            i === 0
+              ? (category.node.uri as string)
+              : (`${category.node.uri}${i + 1}` as string),
           component: BlogTemplate,
           context: {
             limit: postsPerPage,
@@ -56,7 +58,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
             catId: category.node.id,
             catName: category.node.name,
             catUri: category.node.uri,
-            categories: allWpCategory,
+            categories: result.data?.allWpCategory!,
           },
         });
       });

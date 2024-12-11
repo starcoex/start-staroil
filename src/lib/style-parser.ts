@@ -21,5 +21,3 @@ export const options = {
   },
   trim: true,
 };
-
-// In render

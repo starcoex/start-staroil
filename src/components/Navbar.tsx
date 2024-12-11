@@ -4,16 +4,20 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/react";
-import { Link, PageProps } from "gatsby";
+import { Link } from "gatsby";
 import { PlusGrid, PlusGridItem, PlusGridRow } from "./Plus-grid";
 import Logo from "./Logo";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Bars2Icon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import { Bars2Icon, CheckIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 const DesktopNav = () => {
@@ -30,7 +34,7 @@ const DesktopNav = () => {
               >
                 {menu.label}
               </Link>
-              {menu.childItems?.nodes.length !== 0 && (
+              {menu.childItems?.nodes.length !== 0 ? (
                 <Popover className="relative">
                   <PopoverButton className="flex items-center  gap-x-1 text-sm/6 font-semibold text-gray-900">
                     <ChevronDownIcon
@@ -62,7 +66,7 @@ const DesktopNav = () => {
                     </div>
                   </PopoverPanel>
                 </Popover>
-              )}
+              ) : null}
             </PlusGridItem>
           ) : null
         )}
