@@ -16,7 +16,7 @@ export default function Logo({
       )}
     >
       <img
-        alt={site.siteMetadata.title}
+        alt={site?.siteMetadata?.title!}
         src={logoStarcoex}
         className="h-9 max-sm:mx-auto sm:h-8 lg:h-12"
       />

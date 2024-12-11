@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 
 const useMenuQuery = () => {
-  return useStaticQuery(graphql`
+  return useStaticQuery<Queries.HeaderQueryQuery>(graphql`
     query HeaderQuery {
       site {
         siteMetadata {

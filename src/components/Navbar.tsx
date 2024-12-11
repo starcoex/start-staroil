@@ -17,7 +17,7 @@ import { Bars2Icon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 const DesktopNav = () => {
-  const { site, wpMenu }: PageProps<Queries.HeaderQueryQuery> = useMenuQuery();
+  const { site, wpMenu } = useMenuQuery();
   return (
     <nav aria-label="main navigation" className="relative hidden lg:flex">
       <PopoverGroup className="hidden lg:flex lg:gap-x-12">
@@ -83,8 +83,8 @@ const MobileNavButton = () => {
 };
 
 const MobileNav = () => {
-  const data: PageProps<Queries.HeaderQueryQuery> = useMenuQuery();
-  const { wpMenu } = data;
+  const { site, wpMenu } = useMenuQuery();
+
   return (
     <DisclosurePanel className="lg:hidden">
       <div className="flex flex-col gap-6 py-4">
@@ -102,7 +102,7 @@ const MobileNav = () => {
               className="flex items-center"
             >
               <Link
-                to={menu.url}
+                to={menu.url!}
                 className="text-base font-medium text-gray-950"
               >
                 {menu.label}

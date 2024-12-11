@@ -38,7 +38,7 @@ type ButtonProps = (
     href?: undefined;
   });
 
-export function Button1({ className, ...props }: ButtonProps) {
+export const Button = ({ className, ...props }: ButtonProps) => {
   props.variant ??= "solid";
   props.color ??= "slate";
 
@@ -53,4 +53,4 @@ export function Button1({ className, ...props }: ButtonProps) {
   );
 
   return <button className={className} {...props} />;
-}
+};
