@@ -1,7 +1,6 @@
 import React from "react";
-import PageLayout from "../../components/page-component";
-import { BreadCrumb } from "../../components/breadCrumb";
-import starcoexLogoHr from "../../images/starcoex_symbol_logo_hr.svg";
+
+import starcoexLogoHr from "../../images/starcoex_logo_horizontality.svg";
 import starcoexLogo from "../../images/starcoex_logo.svg";
 import starcoexLogoSymbol from "../../images/starcoex_symbol_logo.svg";
 import zeragaeLogo from "../../images/zeragae_logo.svg";
@@ -15,6 +14,8 @@ import zergaeColorBlack from "../../images/제라게검정.
 import staroilColorRed from "../../images/별표 빨강.png";
 import staroilColorOrange from "../../images/별표 오렌지.png";
 import staroilColorYellow from "../../images/별표노랑.png";
+import Layout from "../../components/Layout";
+import BreadCrumb from "../../components/BreadCrumb";
 
 const ciStarcoex = [
   {
@@ -123,7 +124,8 @@ const ciColorStarcoex = [
     },
     colorWord: {
       first: "적색과 주황색을 교차하여 넘치는 에너지와 열정을 표현",
-      second: "원형과 색상이 어우러져 “태양”의 모습처럼 고객을 최우선으로 빛을 내기 위함",
+      second:
+        "원형과 색상이 어우러져 “태양”의 모습처럼 고객을 최우선으로 빛을 내기 위함",
     },
     finish: "표현내용",
     finishWord: {
@@ -140,7 +142,8 @@ const ciColorZeragae = [
       three: "",
     },
     colorWord: {
-      first: "열정적인 제라게 레드와 블랙을 사용하여 품위있고 고급적인 브랜드의 지향점을 제시",
+      first:
+        "열정적인 제라게 레드와 블랙을 사용하여 품위있고 고급적인 브랜드의 지향점을 제시",
       second: "",
     },
     finish: "표현내용",
@@ -159,7 +162,8 @@ const ciColorStaroil = [
     },
     colorWord: {
       first: "적색과 주황색을 교차하여 넘치는 에너지와 열정을 표현",
-      second: "원형과 색상이 어우러져 “태양”의 모습처럼 고객을 최우선으로 빛을 내기 위함",
+      second:
+        "원형과 색상이 어우러져 “태양”의 모습처럼 고객을 최우선으로 빛을 내기 위함",
     },
     finish: "표현내용",
     finishWord: {
@@ -169,7 +173,7 @@ const ciColorStaroil = [
 ];
 const CorporateIdentity = () => {
   return (
-    <PageLayout>
+    <Layout>
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <BreadCrumb
           //@ts-ignore
@@ -178,23 +182,34 @@ const CorporateIdentity = () => {
       </div>
       <div className="mt-6 space-y-10 divide-gray-200 border-b border-t border-gray-200 pb-10">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-10 lg:max-w-7xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">스타코엑스 CI 소개</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+            스타코엑스 CI 소개
+          </h2>
           <p className="mt-6 text-base leading-8 text-gray-600">
-            저희 스타코엑스는 고객과 사회에 가치를 전달하고 혁신적이고 역동적인 기업입니다. 우리의 CI는 회사의 정체성과
-            가치를 대중에게 전달하며, 브랜드 이미지를 구축하고 강화하는 중요한 역할을 합니다.
+            저희 스타코엑스는 고객과 사회에 가치를 전달하고 혁신적이고 역동적인
+            기업입니다. 우리의 CI는 회사의 정체성과 가치를 대중에게 전달하며,
+            브랜드 이미지를 구축하고 강화하는 중요한 역할을 합니다.
           </p>
         </div>
         <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:grid lg:px-8 lg:grid-cols-4 lg:gap-x-8">
           {ciStarcoex.map((c, index) => (
             <div key={index}>
               <div className="">
-                <img src={c.logo} className="h-16 w-1/2   object-fill" alt={c.name} />
+                <img
+                  src={c.logo}
+                  className="h-16 w-1/2   object-fill"
+                  alt={c.name}
+                />
               </div>
-              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">{c.name}</h3>
+              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">
+                {c.name}
+              </h3>
               <p className="text-sm leading-6 text-gray-600">{c.define}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.star}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.coex}</p>
-              <p className="text-sm leading-6 text-gray-700 mb-20">{c.word.expand}</p>
+              <p className="text-sm leading-6 text-gray-700 mb-20">
+                {c.word.expand}
+              </p>
             </div>
           ))}
           {ciColorStarcoex.map((c) => (
@@ -203,24 +218,37 @@ const CorporateIdentity = () => {
                 <img src={c.colorLogo.first} alt="" />
                 <img src={c.colorLogo.second} alt="" />
               </div>
-              <p className="text-sm leading-6 text-gray-700 mt-4">{c.colorWord.first}</p>
+              <p className="text-sm leading-6 text-gray-700 mt-4">
+                {c.colorWord.first}
+              </p>
             </div>
           ))}
           <div className="lg:col-span-3">
-            <p>Starcoex CI는 역동(에너지), 성장(미래지향), 열정(누구나) 지향점을 제시</p>
+            <p>
+              Starcoex CI는 역동(에너지), 성장(미래지향), 열정(누구나) 지향점을
+              제시
+            </p>
           </div>
         </div>
         <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:grid lg:px-8 lg:grid-cols-4 lg:gap-x-8">
           {ciZeragae.map((c, index) => (
             <div key={index}>
               <div className="">
-                <img src={c.logo} className="h-16 w-1/2   object-fill" alt={c.name} />
+                <img
+                  src={c.logo}
+                  className="h-16 w-1/2   object-fill"
+                  alt={c.name}
+                />
               </div>
-              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">{c.name}</h3>
+              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">
+                {c.name}
+              </h3>
               <p className="text-sm leading-6 text-gray-600">{c.define}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.star}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.coex}</p>
-              <p className="text-sm leading-6 text-gray-700 mb-20">{c.word.expand}</p>
+              <p className="text-sm leading-6 text-gray-700 mb-20">
+                {c.word.expand}
+              </p>
             </div>
           ))}
           {ciColorZeragae.map((c) => (
@@ -229,24 +257,37 @@ const CorporateIdentity = () => {
                 <img src={c.colorLogo.first} alt="" />
                 <img src={c.colorLogo.second} alt="" className="mt-1" />
               </div>
-              <p className="text-sm leading-6 text-gray-700 mt-4">{c.colorWord.first}</p>
+              <p className="text-sm leading-6 text-gray-700 mt-4">
+                {c.colorWord.first}
+              </p>
             </div>
           ))}
           <div className="lg:col-span-3">
-            <p>제라(최고, 아주, 매우)와 제주도 사투리 게(’말할 것도 없이 당연하다’ 라는 뜻)의 합성어</p>
+            <p>
+              제라(최고, 아주, 매우)와 제주도 사투리 게(’말할 것도 없이
+              당연하다’ 라는 뜻)의 합성어
+            </p>
           </div>
         </div>{" "}
         <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-8 lg:max-w-7xl lg:grid lg:px-8 lg:grid-cols-4 lg:gap-x-8">
           {ciStarOil.map((c, index) => (
             <div key={index}>
               <div className="">
-                <img src={c.logo} className="h-16 w-1/2   object-fill" alt={c.name} />
+                <img
+                  src={c.logo}
+                  className="h-16 w-1/2   object-fill"
+                  alt={c.name}
+                />
               </div>
-              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">{c.name}</h3>
+              <h3 className="mt-5 text-base font-medium leading-8 tracking-tight text-gray-900">
+                {c.name}
+              </h3>
               <p className="text-sm leading-6 text-gray-600">{c.define}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.star}</p>
               <p className="text-sm leading-6 text-gray-700">{c.word.coex}</p>
-              <p className="text-sm leading-6 text-gray-700 mb-20">{c.word.expand}</p>
+              <p className="text-sm leading-6 text-gray-700 mb-20">
+                {c.word.expand}
+              </p>
             </div>
           ))}
           {ciColorStaroil.map((c) => (
@@ -259,11 +300,14 @@ const CorporateIdentity = () => {
             </div>
           ))}
           <div className="lg:col-span-3">
-            <p>별모양을 분리하여 활기찬 사랑의 형상을 이미지화하여 친절한 서비스를 제공하는 업체의 모습을 제시</p>
+            <p>
+              별모양을 분리하여 활기찬 사랑의 형상을 이미지화하여 친절한
+              서비스를 제공하는 업체의 모습을 제시
+            </p>
           </div>
         </div>
       </div>
-    </PageLayout>
+    </Layout>
   );
 };
 
