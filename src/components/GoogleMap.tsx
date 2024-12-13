@@ -21,7 +21,8 @@ const OPTIONS = {
 const GoogleMaps = ({ center }: MapProps) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: `${process.env.GOOGLE_MAPS_API_KEY}`,
+    // googleMapsApiKey: `${process.env.GOOGLE_MAPS_API_KEY}`,
+    googleMapsApiKey: "AIzaSyBfj1cEl8MpIqeyG3Y5503lFo4DKLK8D5M",
   });
   const [map, setMap] = useState(null);
 
