@@ -17,6 +17,7 @@ import SideBar from "../components/SideBar";
 import Pages from "../components/Pages";
 import Contact from "../components/Contact";
 import WashMain from "../components/WashMain";
+import Seo from "../components/SEO";
 
 interface PageTemplateProps {
   data: Queries.PageDataQuery;
@@ -51,16 +52,18 @@ const PageTemplate = ({ data }: PageTemplateProps) => {
   // );
   return (
     <Layout>
-      {data.wpPage?.title === "Why Cake It?" ? <About /> : null}
+      <Seo title={data.wpPage?.title!} />
+      {data.wpPage?.title === "Why Cake It?" ? (
+        <About title={data.wpPage?.title!} />
+      ) : null}
       {data.wpPage?.title === "Contact us" ? (
-        <Contact />
+        <Contact title={data.wpPage?.title!} />
       ) : (
         <WashMain data={data} />
       )}
     </Layout>
   );
 };
-
 export default PageTemplate;
 
 export const pageQuery = graphql`

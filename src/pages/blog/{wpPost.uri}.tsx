@@ -9,6 +9,7 @@ import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import { Button } from "../../components/Button";
 import parse from "html-react-parser";
 import { options } from "../../lib/style-parser";
+import Seo from "../../components/SEO";
 
 interface PostTemplateProps {
   data: Queries.PostDataQuery;
@@ -18,6 +19,7 @@ const PostTemplate = ({ data }: PostTemplateProps) => {
   const { wpPost } = data;
   return (
     <Layout>
+      <Seo title={wpPost?.title!} />
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <Subheading className="mt-16">
           <span

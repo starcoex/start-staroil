@@ -4,9 +4,7 @@ module.exports = {
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
-  theme: {
-    extend: {},
-  },
+  theme: {},
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/line-clamp"),

@@ -19,6 +19,7 @@ import Posts from "../components/Posts";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
 import { FadeIn } from "../components/FadeIn";
+import Seo from "../components/SEO";
 
 interface BlogTemplateProps {
   pageContext: PageContext;
@@ -29,9 +30,9 @@ const Blog = ({ pageContext, data }: BlogTemplateProps) => {
   const { allWpPost } = data;
   const { catId, catName, catUri, numPages, currentPage, categories } =
     pageContext;
-
   return (
     <main className="overflow-hidden">
+      <Seo title="블로그" />
       <Layout>
         <Container>
           <FadeIn>

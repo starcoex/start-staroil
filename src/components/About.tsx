@@ -6,10 +6,16 @@ import staroldpicture2 from "../images/DSC02686.jpg";
 import { SectionIntro } from "./SectionIntro";
 import { Team } from "./Team";
 import { FadeIn } from "./FadeIn";
+import Seo from "./SEO";
 
-const About = () => {
+interface AboutProps {
+  title?: string;
+}
+
+const About = ({ title }: AboutProps) => {
   return (
     <>
+      <Seo title={title} />
       <FadeIn>
         <div className="mt-32 overflow-hidden sm:mt-40">
           <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
@@ -89,5 +95,4 @@ const About = () => {
     </>
   );
 };
-
 export default About;

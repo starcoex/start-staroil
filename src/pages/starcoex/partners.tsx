@@ -10,6 +10,7 @@ import { Link } from "gatsby";
 import Layout from "../../components/Layout";
 import BreadCrumb from "../../components/BreadCrumb";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import Seo from "../../components/SEO";
 
 const partners = [
   {
@@ -53,6 +54,7 @@ const partners = [
 const Partners = () => {
   return (
     <Layout>
+      <Seo title="파트너" />
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
