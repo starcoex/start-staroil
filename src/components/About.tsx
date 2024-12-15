@@ -7,6 +7,7 @@ import { SectionIntro } from "./SectionIntro";
 import { Team } from "./Team";
 import { FadeIn } from "./FadeIn";
 import Seo from "./SEO";
+import History from "./History";
 
 interface AboutProps {
   title?: string;
@@ -77,6 +78,7 @@ const About = ({ title }: AboutProps) => {
           </div>
         </div>
       </FadeIn>
+      <History />
       <div className="mt-24 rounded-3xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
         <SectionIntro
           eyebrow="우리의 문화"
