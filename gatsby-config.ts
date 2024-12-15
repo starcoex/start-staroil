@@ -15,8 +15,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: "http://cakeit.local/graphql",
-        // url: "http://192.168.1.110:5010/graphql",
+        // url: "http://cakeit.local/graphql",
+        url: "http://192.168.1.110:5010/graphql",
       },
     },
     {

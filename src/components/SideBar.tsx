@@ -40,7 +40,9 @@ const SideBar = ({ catId, categories }: SideBarProps) => {
           return cat.node.slug !== "uncategorized" ? (
             <div key={cat.node.id} className="mt-1">
               <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 text-xs font-medium text-gray-600 mr-2">
-                {cat.node.count}
+                {cat.node.count < 10
+                  ? cat.node.count.toString().padStart(2, "0")
+                  : cat.node.count.toString()}
               </span>
               <Link to={cat.node.uri} activeClassName="font-bold">
                 <span

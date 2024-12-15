@@ -1,23 +1,13 @@
 import React from "react";
 import { PageContext } from "gatsby/internal";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { Heading, Lead, Subheading } from "../components/Text";
 import Container from "../components/Container";
-import { StaticImage } from "gatsby-plugin-image";
-import dayjs from "dayjs";
-import Navbar from "../components/Navbar";
-import { GradientBackground } from "../components/Gradient";
-import parse from "html-react-parser";
-import { options } from "../lib/style-parser";
-import { Menu, MenuButton } from "@headlessui/react";
-import { ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import BreadCrumb from "../components/BreadCrumb";
-import SideBar from "../components/SideBar";
 import FeaturePosts from "../components/FeaturePosts";
 import Posts from "../components/Posts";
 import Pagination from "../components/Pagination";
-import Footer from "../components/Footer";
 import { FadeIn } from "../components/FadeIn";
 import Seo from "../components/SEO";
 

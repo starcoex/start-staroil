@@ -1,35 +1,31 @@
 import React from "react";
+import oil1 from "../images/oil1.png";
+import oil2 from "../images/oil2.png";
+import oil3 from "../images/oil3.png";
 
 const collections = [
   {
-    name: "Handcrafted Collection",
+    name: "가로*세로*높이=부피(량 or 리터)",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-01-collection-01.jpg",
-    imageAlt:
-      "Brown leather key ring with brass metal loops and rivets on wood table.",
+    imageSrc: oil1,
+    imageAlt: "",
     description:
-      "Keep your phone, keys, and wallet together, so you can lose everything at once.",
+      "기존 잔량이 남았을 경우 기름이 차있는 곳까지의 길이를 표시합니다.",
   },
   {
-    name: "Organized Desk Collection",
+    name: "처음부터 주유 미터기를 반드시 확인하세요",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-01-collection-02.jpg",
-    imageAlt:
-      "Natural leather mouse pad on white desk next to porcelain mug and keyboard.",
+    imageSrc: oil2,
+    imageAlt: "",
     description:
-      "The rest of the house will still be a mess, but your desk will look great.",
+      "0 부터시작해서 한드럼이면 200리터까지 들어가는 지를 미터기로 확인합니다.",
   },
   {
-    name: "Focus Collection",
+    name: "마지막 금액, 리터, 단가를 확인하세요",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/plus/img/ecommerce-images/home-page-01-collection-03.jpg",
-    imageAlt:
-      "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
-    description:
-      "Be more productive than enterprise project managers with a single piece of paper.",
+    imageSrc: oil3,
+    imageAlt: "",
+    description: "별표주유소는 금액, 리터, 단가가 정확히 일치합니다.",
   },
 ];
 
@@ -52,15 +48,11 @@ const Dose = () => {
 
       <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
         {collections.map((collection) => (
-          <a
-            key={collection.name}
-            href={collection.href}
-            className="group block"
-          >
+          <div className="group block">
             <img
               alt={collection.imageAlt}
-              src={collection.imageSrc}
-              className="aspect-[3/2] w-full rounded-lg object-cover group-hover:opacity-75 lg:aspect-[5/6]"
+              src={collection?.imageSrc}
+              className="aspect-[3/2] w-full rounded-lg object-contain group-hover:opacity-75 lg:aspect-[5/6]"
             />
             <h3 className="mt-4 text-base font-semibold text-gray-900">
               {collection.name}
@@ -68,7 +60,7 @@ const Dose = () => {
             <p className="mt-2 text-sm text-gray-500">
               {collection.description}
             </p>
-          </a>
+          </div>
         ))}
       </div>
     </section>

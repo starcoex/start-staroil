@@ -10,7 +10,7 @@
     "develop": "gatsby develop -p 8001",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p 9001",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },

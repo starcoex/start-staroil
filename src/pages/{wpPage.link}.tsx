@@ -1,20 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import staroldpicture from "../images/Pic 2952.jpg";
-import staroldpicture2 from "../images/DSC02686.jpg";
-import starpicture from "../images/KakaoTalk_Photo_2024-12-07-16-46-00.jpg";
-import starpicture2 from "../images/KakaoTalk_Photo_2024-12-07-16-46-07.jpg";
-import { SectionIntro } from "../components/SectionIntro";
-import { Team } from "../components/Team";
-import { FadeIn } from "../components/FadeIn";
 import About from "../components/About";
-import Container from "../components/Container";
-import BreadCrumb from "../components/BreadCrumb";
-import Posts from "../components/Posts";
-import SideBar from "../components/SideBar";
-import Pages from "../components/Pages";
 import Contact from "../components/Contact";
 import WashMain from "../components/WashMain";
 import Seo from "../components/SEO";
@@ -46,17 +33,13 @@ const features = [
 ];
 
 const PageTemplate = ({ data }: PageTemplateProps) => {
-  // const image = getImage(
-  //   data.wpPage?.featuredImage?.node?.localFile?.childImageSharp
-  //     ?.gatsbyImageData!
-  // );
   return (
     <Layout>
       <Seo title={data.wpPage?.title!} />
-      {data.wpPage?.title === "Why Cake It?" ? (
+      {data.wpPage?.title === "소개" ? (
         <About title={data.wpPage?.title!} />
       ) : null}
-      {data.wpPage?.title === "Contact us" ? (
+      {data.wpPage?.title === "문의하기" ? (
         <Contact title={data.wpPage?.title!} />
       ) : (
         <WashMain data={data} />
