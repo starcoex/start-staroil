@@ -1,6 +1,5 @@
 import React from "react";
 import { FadeIn } from "./FadeIn";
-import PageSideBar from "./PageSideBar";
 import Container from "./Container";
 import { Border } from "./Border";
 import { GatsbyImage } from "gatsby-plugin-image";
