@@ -7,8 +7,6 @@ import { Heading, Subheading } from "../../components/Text";
 import { UserIcon } from "@heroicons/react/16/solid";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import { Button } from "../../components/Button";
-import parse from "html-react-parser";
-import { options } from "../../lib/style-parser";
 import Seo from "../../components/SEO";
 
 interface PostTemplateProps {

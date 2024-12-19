@@ -42,7 +42,7 @@ const Pages = ({ data }: PagesProps) => {
                     </div>
                   </div>
                   <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                    <p className="font-display text-4xl font-medium text-neutral-950">
+                    <p className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                       <Link to={children.uri}>{children.title}</Link>
                     </p>
                     <div

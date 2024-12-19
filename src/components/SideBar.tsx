@@ -41,7 +41,7 @@ const SideBar = ({ catId, categories }: SideBarProps) => {
             <div key={cat.node.id} className="mt-1">
               <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 text-xs font-medium text-gray-600 mr-2">
                 {cat.node.count < 10
-                  ? cat.node.count.toString().padStart(2, "0")
+                  ? (cat.node.count?.toString()?.padStart(2, "0") as string)
                   : cat.node.count.toString()}
               </span>
               <Link to={cat.node.uri} activeClassName="font-bold">

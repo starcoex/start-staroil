@@ -4,15 +4,15 @@ import { Link } from "gatsby";
 
 const navigation = {
   main: [
-    { name: "About", href: "/om-brandalliances" },
-    { name: "Service", href: "/our-cakes" },
+    { name: "About", href: "/contact-us" },
+    { name: "Service", href: "/car-wash" },
     { name: "Blog", href: "/blog/all-posts" },
     { name: "Partners", href: "/starcoex/partners" },
   ],
   social: [
     {
       name: "Facebook",
-      href: "#",
+      href: "javascript:alert('준비중입니다.')",
       icon: (props: React.ComponentPropsWithoutRef<"svg">) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -25,7 +25,7 @@ const navigation = {
     },
     {
       name: "Instagram",
-      href: "#",
+      href: "javascript:alert('준비중입니다.')",
       icon: (props: React.ComponentPropsWithoutRef<"svg">) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -87,7 +87,7 @@ const Footer = () => {
             <Link
               key={item.name}
               to={item.href}
-              target={"_blank"}
+              // target={"_blank"}
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { ChevronRightIcon, HomeIcon } from "@heroicons/react/20/solid";
+import { HomeIcon } from "@heroicons/react/20/solid";
 import { FadeIn } from "./FadeIn";
 
 interface BreadCrumbProps {
